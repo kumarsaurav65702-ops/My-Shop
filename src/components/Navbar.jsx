@@ -1,10 +1,11 @@
-import { Search, List, CircleUserRound } from 'lucide-react'
+import { Search, List, CircleUserRound,  ShoppingBag } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 
     const [menu, setMenu] = useState(false)
+    const [num, setNum] = useState('0')
 
     let showmenu = () => {
         setMenu(!menu)
@@ -14,9 +15,9 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className='bg-(--c5) h-15 p-3  flex items-center justify-evenly fixed w-full top-0 z-10 '>
-                <Link to="/" className='font-bold text-xl'>MyShop</Link>
-                <div className='hidden md:flex gap-8 font-semibold '>
+            <nav className='bg-(--c5) h-18 p-3  flex items-center justify-evenly fixed w-full top-0 z-10 '>
+                <Link to="/" className='font-bold text-3xl'>MyShop</Link>
+                <div className='hidden md:flex gap-8 font-semibold text-lg '>
                     <Link to="/">Home</Link>
                     <Link to="/about">About</Link>
                     <Link to="/contact">Contact</Link>
@@ -25,6 +26,10 @@ const Navbar = () => {
                     <input className='bg-transparent text-white outline-none w-full pr-6 m-1' type="text" placeholder='Search...' />
                     <Search className='  text-white mr-2 ' />
                 </div>
+                <Link to='/cart' className='hidden md:flex bg-black text-white rounded-full p-2 active:scale-95 hover:bg-gray-700 relative  '>
+                <div className='bg-red-600 rounded-full absolute right-0 top-0 w-5 h-5 text-center leading-tight text-sm'>{num}</div>
+                    <ShoppingBag />
+                </Link>
                 <div>
                     <button className="px-3 py-1 font-semibold text-white bg-gray-600 rounded-md shadow-md hover:bg-(--c6) focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 transition duration-150 ease-in-out hidden md:inline-block">
                         <Link to="/login">Login</Link>
