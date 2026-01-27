@@ -7,6 +7,9 @@ import Login from './pages/Login'
 import Contact from './pages/Contact'
 import Product from './pages/Product'
 import ShoppingCart from './pages/ShoppingCart'
+import Footbar from './components/Footbar'
+import WishList from './pages/WishList'
+import SignUp from './pages/SignUp'
 
 
 const App = () => {
@@ -20,8 +23,11 @@ const App = () => {
     <Route path='/contact' element={<Contact/>}/>
     <Route path='/product' element={<Product/>}/>
     <Route path='/cart' element={<ShoppingCart/>}/>
+    <Route path='/wishlist' element={<WishList/>}/>
+    <Route path='/singup' element={<SignUp/>}/>
 
    </Routes>
+   <Footbar/>
     </>
   )
 }
