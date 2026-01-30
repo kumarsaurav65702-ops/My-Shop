@@ -26,12 +26,23 @@ useEffect(() => {
 
 
   return (
-      <div className="min-h-screen bg-(--c5) ">
-     {/* {data.map(function(elem, idx){
-      return <h1>hello {idx}</h1>
-    })} */}
-    <ProductCard/>
-  </div>
+<>
+
+   <div className="min-h-screen w-full bg-(--c5)">
+             
+                 <h1 className='text-red-900 font-extrabold text-2xl px-3 py-2 h-auto'>Top Products</h1>
+ <div className='grid grid-cols-2  items-center justify-around'>
+   {data.map((elem, idx) => (
+    <ProductCard key={idx} elem={elem} />
+  ))}
+ </div>
+</div>
+</>
+
+   
+  
+   
+ 
   )
 }
 

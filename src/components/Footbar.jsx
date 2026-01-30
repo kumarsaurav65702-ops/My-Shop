@@ -9,7 +9,7 @@ const Footbar = () => {
 
   return (
     <>
-    <div className='flex bg-red-950 text-white items-center w-full p-5 justify-around bottom-0 fixed md:hidden'>
+    <div className='flex bg-red-950 text-white items-center w-full p-4 justify-around bottom-0 fixed md:hidden'>
         <Link to='/product'><Store /></Link>
         <Link to='/wishlist'><Heart /></Link>
          <Link to='/cart' className=' md:flex  text-white rounded-full p-2 active:scale-95 hover:bg-gray-700 relative md:m-3 '>

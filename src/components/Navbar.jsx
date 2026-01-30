@@ -19,7 +19,7 @@ const Navbar = (props) => {
 
     return (
         <>
-            <nav className='bg-(--c5) h-18 p-3 border-b-3  flex items-center justify-evenly fixed w-full top-0 z-10 '>
+            <nav className='bg-(--c5) h-16 p-3 border-b-3  flex items-center justify-evenly w-full'>
                 <Link to="/" className='font-bold text-3xl'>MyShop</Link>
                 <div className='hidden md:flex gap-8 m-5 font-semibold text-lg  '>
                     <Link to="/">Home</Link>
