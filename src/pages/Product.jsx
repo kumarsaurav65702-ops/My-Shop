@@ -24,7 +24,6 @@ const Product = () => {
     getData()
   }, [])
 
-  let printUserData = <h3 className='text-gray-200 text-xs absolute top-1/2 left-1/2 -translate-x-1 -translate-y-1'>Loading...</h3>
 
   return (
     <>
@@ -36,10 +35,15 @@ const Product = () => {
         <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5  items-center justify-around'>
 
 
-          {data.map((elem, idx) => (
-            <ProductCard key={idx} elem={elem} />
-          ))}
+          {data.length > 0 ? (
+            data.map((elem, idx) => (
+              <ProductCard key={idx} elem={elem} />
+            ))
+          ) : (
+            <p className="text-black text-2xl absolute top-1/2 left-1/2 -translate-x-12 -translate-y-12  sm:absolute sm:top-1/2 sm:left-1/2 sm:-translate-x-1 sm:-translate-y-1">Loading...</p>
+          )}
         </div>
+        
       </div>
     </>
 
