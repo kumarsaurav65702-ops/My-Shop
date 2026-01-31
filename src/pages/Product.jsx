@@ -31,7 +31,7 @@ useEffect(() => {
    <div className="min-h-screen w-full bg-(--c5)">
              
                  <h1 className='text-red-900 font-extrabold text-2xl px-3 py-2 h-auto'>Top Products</h1>
- <div className='grid grid-cols-2  items-center justify-around'>
+ <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5  items-center justify-around'>
    {data.map((elem, idx) => (
     <ProductCard key={idx} elem={elem} />
   ))}
