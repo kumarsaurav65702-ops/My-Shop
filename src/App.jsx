@@ -10,6 +10,7 @@ import ShoppingCart from './pages/ShoppingCart'
 import Footbar from './components/Footbar'
 import WishList from './pages/WishList'
 import SignUp from './pages/SignUp'
+import ProductDetailPage from './pages/ProductDetailPage'
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
     <Route path='/cart' element={<ShoppingCart/>}/>
     <Route path='/wishlist' element={<WishList/>}/>
     <Route path='/singup' element={<SignUp/>}/>
+    <Route path='/product/:id' element={<ProductDetailPage/>}/>
 
    </Routes>
    <Footbar/>

@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import ProductCard from '../components/ProductCard'
+import { Link } from 'react-router-dom'
 
 const Product = () => {
   const [data, setData] = useState([])
@@ -14,11 +15,20 @@ const Product = () => {
   //   }, [])
   //     
 
-  const getData = async () => {
-    const response = await axios.get("https://api.escuelajs.co/api/v1/products")
+ const getData = async () => {
+  try {
+    const response = await axios.get(
+      "https://api.escuelajs.co/api/v1/products"
+    )
+
     setData(response.data)
     console.log(response.data)
+
+  } catch (error) {
+    console.error("Error fetching products:", error)
   }
+}
+
 
   useEffect(() => {
     getData()
@@ -37,7 +47,7 @@ const Product = () => {
 
           {data.length > 0 ? (
             data.map((elem, idx) => (
-              <ProductCard key={idx} elem={elem} />
+             <Link key={idx} to={`/product/${elem.id}`}><ProductCard elem={elem} /></Link>
             ))
           ) : (
             <p className="text-black text-2xl absolute top-1/2 left-1/2 -translate-x-12 -translate-y-12  sm:absolute sm:top-1/2 sm:left-1/2 sm:-translate-x-1 sm:-translate-y-1">Loading...</p>
