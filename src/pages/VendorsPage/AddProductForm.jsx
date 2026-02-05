@@ -30,12 +30,6 @@ const AddProductForm = () => {
       setResponseMessage('Post created successfully!')
       console.log(response.data)
 
-      setTitle('')
-      setPrice('')
-      setDescription('')
-      setCategoryId('')
-      setImage('')
-
     } catch (error) {
       setResponseMessage('Error creating post')
       console.error(error)
