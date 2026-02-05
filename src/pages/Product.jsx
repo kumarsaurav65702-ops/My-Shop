@@ -15,23 +15,40 @@ const Product = () => {
   //   }, [])
   //     
 
- const getData = async () => {
-  try {
-    const response = await axios.get(
-      "https://api.escuelajs.co/api/v1/products"
-    )
+//  const getData = async () => {
+//   try {
+//     const response = await axios.get(
+//       "https://fakestoreapiserver.reactbd.org/api/products"
+//     )
 
-    setData(response.data)
+//     setData(response.data)
+//     console.log(response.data.data)
+
+//   } catch (error) {
+//     console.error("Error fetching products:", error)
+//   }
+// }
+
+
+
+
+async function fetchProduct() {
+  try {
+    const response = await axios.get(" https://api.escuelajs.co/api/v1/products")
+
+    setData(response.data) 
     console.log(response.data)
 
   } catch (error) {
-    console.error("Error fetching products:", error)
+    console.log(error)
   }
 }
 
 
+
   useEffect(() => {
-    getData()
+    // getData()
+    fetchProduct();
   }, [])
 
 

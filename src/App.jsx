@@ -11,6 +11,7 @@ import Footbar from './components/Footbar'
 import WishList from './pages/WishList'
 import SignUp from './pages/SignUp'
 import ProductDetailPage from './pages/ProductDetailPage'
+import AddProductForm from './pages/VendorsPage/AddProductForm'
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
     <Route path='/wishlist' element={<WishList/>}/>
     <Route path='/singup' element={<SignUp/>}/>
     <Route path='/product/:id' element={<ProductDetailPage/>}/>
+    <Route path='/vendorform' element={<AddProductForm/>}/>
 
    </Routes>
    <Footbar/>

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 
 const ProductDetailPage = () => {
-  const { id } = useParams()   // 👈 id mil gaya URL se
+  const { id } = useParams() 
   const [product, setProduct] = useState(null)
 
   const getSingleProduct = async () => {
@@ -35,7 +35,7 @@ const ProductDetailPage = () => {
 
         {/* Image */}
         <img
-          src={product.images[0]}
+          src={product.images}
           className="w-full h-80 object-cover rounded"
         />
 

@@ -1,4 +1,4 @@
-import { Search, List, CircleUserRound,  ShoppingBag } from 'lucide-react'
+import { Search, List, CircleUserRound, ShoppingBag } from 'lucide-react'
 import { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CountItemContext } from '../context/CountContext'
@@ -9,13 +9,13 @@ const Navbar = (props) => {
     const [count, setCount] = useContext(CountItemContext)
 
     const [menu, setMenu] = useState(false)
-    
+
 
     let showmenu = () => {
         setMenu(!menu)
     }
 
-  
+
 
     return (
         <>
@@ -31,11 +31,11 @@ const Navbar = (props) => {
                     <Search className='  text-white mr-2 ' />
                 </div>
                 <Link to='/cart' className='hidden md:flex bg-black text-white rounded-full p-2 active:scale-95 hover:bg-gray-700 relative md:m-3 '>
-                {count > 0 && (
-    <div className="bg-red-600 rounded-full absolute right-0 top-0 w-5 h-5 text-center leading-tight text-sm">
-      {count}
-    </div>
-  )}
+                    {count > 0 && (
+                        <div className="bg-red-600 rounded-full absolute right-0 top-0 w-5 h-5 text-center leading-tight text-sm">
+                            {count}
+                        </div>
+                    )}
                     <ShoppingBag />
                 </Link>
                 <div>
@@ -43,6 +43,11 @@ const Navbar = (props) => {
                         <Link to="/login">Login</Link>
                     </button>
                 </div>
+                <Link to='/vendorform'>
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-200">
+                        Vendor
+                    </button>
+                </Link>
                 <div>
                     <button onClick={showmenu} className=' lg:hidden md:hidden xl:hidden 2xl:hidden  p-2 rounded-full active:scale-95'>
                         <List className='cursor-pointer' />
