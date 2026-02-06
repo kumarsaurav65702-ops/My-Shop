@@ -1,12 +1,12 @@
 import { Search, List, CircleUserRound, ShoppingBag } from 'lucide-react'
-import { useContext, useEffect, useState } from 'react'
+import { useContext,  useState } from 'react'
 import { Link } from 'react-router-dom'
-import { CountItemContext } from '../context/CountContext'
+import { StoreContext } from '../context/StoreContext'
 
 const Navbar = (props) => {
 
     const CartCount = 0
-    const [count, setCount] = useContext(CountItemContext)
+    const { count } = useContext(StoreContext)
 
     const [menu, setMenu] = useState(false)
 

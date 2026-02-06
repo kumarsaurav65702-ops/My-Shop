@@ -1,13 +1,17 @@
 import React, { createContext, useState } from 'react'
 
-export const CountItemContext = createContext()
+export const StoreContext = createContext()
 
 const CountContext = (props) => {
     const [count, setCount] = useState('0')
+
+const value = { count, setCount }
+
+
   return (
-    <CountItemContext.Provider value={[count, setCount]}>
+    <StoreContext.Provider value={value}>
         {props.children}
-    </CountItemContext.Provider>
+    </StoreContext.Provider>
   )
 }
 

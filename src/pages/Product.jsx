@@ -6,29 +6,7 @@ import { Link } from 'react-router-dom'
 const Product = () => {
   const [data, setData] = useState([])
 
-  //  useEffect(() => {
-  //     fetch("https://api.escuelajs.co/api/v1/products")
-  //       .then((res) => res.json())
-  //       .then((result) => setData(result))
-  //       .catch((err) => console.log(err))
-  //       console.log(data)
-  //   }, [])
-  //     
-
-//  const getData = async () => {
-//   try {
-//     const response = await axios.get(
-//       "https://fakestoreapiserver.reactbd.org/api/products"
-//     )
-
-//     setData(response.data)
-//     console.log(response.data.data)
-
-//   } catch (error) {
-//     console.error("Error fetching products:", error)
-//   }
-// }
-
+  
 
 
 

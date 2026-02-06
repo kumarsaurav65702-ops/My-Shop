@@ -1,12 +1,11 @@
 import { CircleUserRound, Heart, ShoppingBag, Store } from 'lucide-react'
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { CountItemContext } from '../context/CountContext'
+import { StoreContext } from '../context/StoreContext'
 
 const Footbar = () => {
 
-  const [count, setCount] = useContext(CountItemContext)
-
+  const { count } = useContext(StoreContext)  
   return (
     <>
     <div className='flex bg-red-950 text-white items-center w-full p-4 justify-around bottom-0 fixed md:hidden'>
