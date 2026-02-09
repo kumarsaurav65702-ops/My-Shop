@@ -13,6 +13,7 @@ import SignUp from './pages/SignUp'
 import ProductDetailPage from './pages/ProductDetailPage'
 import AddProductForm from './pages/VendorsPage/AddProductForm'
 import Cart from './pages/Cart'
+import Footer from './components/Footer'
 
 
 const App = () => {
@@ -32,6 +33,7 @@ const App = () => {
     <Route path='/vendorform' element={<AddProductForm/>}/>
 
    </Routes>
+   <Footer/>
    <Footbar/>
     </>
   )
