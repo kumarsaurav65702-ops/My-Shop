@@ -1,10 +1,13 @@
 import axios from "axios"
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { StoreContext } from "../context/StoreContext"
 
-const ProductDetailPage = () => {
+const ProductDetailPage = (props) => {
   const { id } = useParams() 
   const [product, setProduct] = useState(null)
+    const {addToCart} = useContext(StoreContext)
+  
 
   const getSingleProduct = async () => {
     try {
@@ -48,7 +51,7 @@ const ProductDetailPage = () => {
             ₹ {product.price}
           </h2>
 
-          <button className="bg-red-600 py-2 rounded active:scale-95">
+          <button onClick={()=> addToCart(product)} className="bg-red-600 py-2 rounded active:scale-95">
             Add To Cart
           </button>
         </div>

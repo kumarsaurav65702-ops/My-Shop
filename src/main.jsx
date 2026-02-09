@@ -3,13 +3,13 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
-import CountContext from './context/StoreContext.jsx'
+import StoreProvider from './context/StoreContext.jsx'
 
 createRoot(document.getElementById('root')).render(
  <BrowserRouter>
-   <CountContext>
-     <App />
-   </CountContext>
+  <StoreProvider>
+  <App />
+</StoreProvider>
  </BrowserRouter>
    
  

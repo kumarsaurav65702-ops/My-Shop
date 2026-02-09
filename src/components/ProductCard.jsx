@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { StoreContext } from "../context/StoreContext";
 
 const ProductCard = (props) => {
+
+  const {addToCart} = useContext(StoreContext)
+ 
+
   return (
     <>
 
@@ -17,7 +22,7 @@ const ProductCard = (props) => {
             <h1>₹{props.elem.price}</h1>
           </div>
 
-          <button className='bg-red-600 w-40 rounded active:scale-95 lg:mt-10'>Add to Cart</button>
+          <button onClick={()=> addToCart(props.elem)} className='bg-red-600 w-40 rounded active:scale-95 lg:mt-10'>Add to Cart</button>
 
 
         </div>

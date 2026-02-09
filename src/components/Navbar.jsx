@@ -5,16 +5,25 @@ import { StoreContext } from '../context/StoreContext'
 
 const Navbar = (props) => {
 
-    const CartCount = 0
+    const CartCount = '0'
     const { count } = useContext(StoreContext)
+
+    const {search, setSearch } = useContext(StoreContext)
 
     const [menu, setMenu] = useState(false)
 
 
     let showmenu = () => {
         setMenu(!menu)
+        
     }
 
+    let handleChange = (e) => {
+        setSearch(e.target.value)
+    }
+   
+    
+    
 
 
     return (
@@ -27,8 +36,17 @@ const Navbar = (props) => {
                     <Link to="/contact">Contact</Link>
                 </div>
                 <div className='bg-black text-white flex items-center w-44 sm:w-96 rounded-4xl p-1 md:m-5'>
-                    <input className='bg-transparent text-white outline-none w-full pr-6 m-1' type="text" placeholder='Search...' />
-                    <Search className='  text-white mr-2 ' />
+
+                   {/* search input */}
+
+                    <input 
+                    value={search}
+                    onChange={handleChange} 
+                    className='bg-transparent text-white outline-none w-full pr-6 m-1' type="text" 
+                    placeholder='Search...' />
+                    <Search className='  text-white mr-2 '
+                     />
+
                 </div>
                 <Link to='/cart' className='hidden md:flex bg-black text-white rounded-full p-2 active:scale-95 hover:bg-gray-700 relative md:m-3 '>
                     {count > 0 && (

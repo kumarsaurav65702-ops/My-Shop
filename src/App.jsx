@@ -6,12 +6,13 @@ import About from './pages/About'
 import Login from './pages/Login'
 import Contact from './pages/Contact'
 import Product from './pages/Product'
-import ShoppingCart from './pages/ShoppingCart'
+import ShoppingCart from './pages/Cart'
 import Footbar from './components/Footbar'
 import WishList from './pages/WishList'
 import SignUp from './pages/SignUp'
 import ProductDetailPage from './pages/ProductDetailPage'
 import AddProductForm from './pages/VendorsPage/AddProductForm'
+import Cart from './pages/Cart'
 
 
 const App = () => {
@@ -24,7 +25,7 @@ const App = () => {
     <Route path='/login' element={<Login/>}/>
     <Route path='/contact' element={<Contact/>}/>
     <Route path='/product' element={<Product/>}/>
-    <Route path='/cart' element={<ShoppingCart/>}/>
+    <Route path='/cart' element={<Cart/>}/>
     <Route path='/wishlist' element={<WishList/>}/>
     <Route path='/singup' element={<SignUp/>}/>
     <Route path='/product/:id' element={<ProductDetailPage/>}/>
