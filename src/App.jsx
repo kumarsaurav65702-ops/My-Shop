@@ -32,6 +32,7 @@ const App = () => {
     <Route path='/product/:id' element={<ProductDetailPage/>}/>
     <Route path='/vendorform' element={<AddProductForm/>}/>
 
+
    </Routes>
    <Footer/>
    <Footbar/>

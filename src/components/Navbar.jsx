@@ -61,11 +61,7 @@ const Navbar = (props) => {
                         <Link to="/login">Login</Link>
                     </button>
                 </div>
-                <Link to='/vendorform'>
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-200">
-                        Vendor
-                    </button>
-                </Link>
+               
                 <div>
                     <button onClick={showmenu} className=' lg:hidden md:hidden xl:hidden 2xl:hidden  p-2 rounded-full active:scale-95'>
                         <List className='cursor-pointer' />
