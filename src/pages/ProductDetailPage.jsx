@@ -39,19 +39,19 @@ const ProductDetailPage = (props) => {
         {/* Image */}
         <img
           src={product.images}
-          className="w-full h-80 object-cover rounded"
+          className="w-full h-80 object-fit rounded-2xl"
         />
 
         {/* Details */}
         <div className="flex flex-col gap-3">
           <h1 className="text-3xl font-bold">{product.title}</h1>
           <p className="text-gray-400">{product.category?.name}</p>
-          <p>{product.description}</p>
           <h2 className="text-2xl text-green-500 font-bold">
             ₹ {product.price}
           </h2>
+          <p>{product.description}</p>
 
-          <button onClick={()=> addToCart(product)} className="bg-red-600 py-2 rounded active:scale-95">
+          <button onClick={()=> addToCart(product)} className="bg-red-600 py-2 rounded-4xl active:scale-95">
             Add To Cart
           </button>
         </div>
