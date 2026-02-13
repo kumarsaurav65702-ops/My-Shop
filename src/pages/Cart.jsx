@@ -10,7 +10,7 @@ const Cart = () => {
 
       {cart.map((item) => (
         <div key={item.id} className="flex justify-between border p-3 mb-2">
-
+<img src={item.images[0]} alt={item.title} className="w-60 h-60 object-cover rounded-md" />
           <p>{item.title}</p>
 
           <div>

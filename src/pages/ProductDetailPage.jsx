@@ -33,17 +33,17 @@ const ProductDetailPage = (props) => {
   }
 
   return (
-    <div className="min-h-screen bg-(--c5) flex items-center justify-center p-2">
-      <div className="bg-black min-h-screen text-white rounded-xl shadow-xl p-6 max-w-4xl grid md:grid-cols-2 gap-6 ">
+    <div className="min-h-screen bg-(--c6) flex items-center justify-center p-2">
+      <div className="bg-transparent min-h-screen min-w-full text-white rounded-xl shadow-xl p-6 max-w-4xl grid xl:grid-cols-2  ">
 
         {/* Image */}
         <img
           src={product.images}
-          className="w-full h-80 object-fit rounded-2xl"
+          className="aspect-square xl:h-150 object-fit overflow-hidden rounded-2xl"
         />
 
         {/* Details */}
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col  gap-3">
           <h1 className="text-3xl font-bold">{product.title}</h1>
           <p className="text-gray-400">{product.category?.name}</p>
           <h2 className="text-2xl text-green-500 font-bold">
@@ -51,7 +51,7 @@ const ProductDetailPage = (props) => {
           </h2>
           <p>{product.description}</p>
 
-          <button onClick={()=> addToCart(product)} className="bg-red-600 py-2 rounded-4xl active:scale-95">
+          <button onClick={()=> addToCart(product)} className="bg-red-600 items-center  py-2 max-w-72 rounded-4xl active:scale-95">
             Add To Cart
           </button>
         </div>
